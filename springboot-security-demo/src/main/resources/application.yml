@@ -1,0 +1,10 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /springboot-security-demo
+    
+spring:
+  security:
+    user:
+      name: user
+      password: 123456
