@@ -14,6 +14,7 @@
   <description>springboot-conformity整合项目</description>
   <modules>
   	<module>springboot-conformity-data-solr</module>
+  	<module>springboot-conformity-hadoop</module>
   </modules>
   
   <properties>
@@ -22,7 +23,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <swagger2.version>2.4.0</swagger2.version>
     <slf4j.version>1.7.25</slf4j.version>
-		<log4j.version>1.2.17</log4j.version>
+	<log4j.version>1.2.17</log4j.version>
   </properties>
   
   <dependencies>
