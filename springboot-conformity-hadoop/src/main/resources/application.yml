@@ -1,7 +1,7 @@
 server:
   port: 8083
   
-#name-node
-hadoop.name-node: hdfs://139.196.158.120:9000
-#hdfs目录
-hadoop.namespace: /usr/local/src/hadoop/dfs
+#HDFS配置
+hdfs:
+  path: hdfs://www.hejianliang.info:8092
+  user: root
