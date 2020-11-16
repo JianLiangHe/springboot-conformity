@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: springboot-conformity-async
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: hejianliang
+Implementation-Vendor-Id: edu.springboot
+Build-Jdk: 1.8.0_221
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/springboot-conformity/springboot-conformity-async
+Created-By: Maven Integration for Eclipse
+

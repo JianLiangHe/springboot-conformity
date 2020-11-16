@@ -15,10 +15,12 @@
   <modules>
   	<module>springboot-conformity-data-solr</module>
   	<module>springboot-conformity-hadoop</module>
+  	<module>springboot-conformity-async</module>
   </modules>
   
   <properties>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	<java.version>1.8</java.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <swagger2.version>2.4.0</swagger2.version>
