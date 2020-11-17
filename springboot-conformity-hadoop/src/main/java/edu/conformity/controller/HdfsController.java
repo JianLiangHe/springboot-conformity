@@ -4,10 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import edu.conformity.service.HdfsService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiParam;
 
 @RestController
 @RequestMapping("/hdfs/")
@@ -17,7 +21,9 @@ public class HdfsController {
 	private HdfsService service;
 	
 	@RequestMapping(value = "mkdir", method = RequestMethod.GET)
-	public String mkdir(String path) {
+	public String mkdir(
+			@RequestParam(value = "path", required = true) String path
+			) {
 		try {
 			service.mkdir(path);
 			return "success";
@@ -27,23 +33,40 @@ public class HdfsController {
 		}
 	}
 	
-	@PostMapping("/createFile")
-    public Object createFile(String path, MultipartFile file){
-        try {
-            service.createFile(path, file);
-            return RtnData.ok();
-        } catch (Exception e) {
-            return RtnData.fail(e);
-        }
-    }
-
-    @GetMapping("/readFileToString")
-    public Object readFileToString(String path){
-        try {
-            return RtnData.ok(service.readFileToString(path));
-        } catch (Exception e) {
-            return RtnData.fail(e);
-        }
-    }
+	@RequestMapping(
+			value = "createFile", 
+			method = RequestMethod.POST,
+			headers = "content-type=multipart/form-data")
+	public String createFile(
+			 @RequestParam(value = "path", required = true) String path,
+			MultipartFile file 
+			) {
+		String msg = null;
+		
+		try {
+			service.createFile(path, file);
+			msg = "success";
+		} catch (Exception e) {
+			e.printStackTrace();
+			msg = e.getMessage();
+		} finally {
+			return msg;
+		}
+	}
+	
+	@RequestMapping(value = "readFileToString", method = RequestMethod.GET)
+	public String readFileToString(
+			@RequestParam(value = "path", required = true) String path
+			) {
+		String msg = null;
+		try {
+			msg = service.readFileToString(path);
+		} catch (Exception e) {
+			e.printStackTrace();
+			msg = e.getMessage();
+		} finally {
+			return msg;
+		}
+	}
 	
 }

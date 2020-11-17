@@ -1,7 +1,10 @@
 server:
   port: 8083
+  servlet:
+    context-path: /springboot-conformity-hadoop
   
 #HDFS配置
 hdfs:
-  path: hdfs://www.hejianliang.info:8092
+  #path: hdfs://www.hejianliang.info:8092
+  path: hdfs://139.196.158.120:8092
   user: root

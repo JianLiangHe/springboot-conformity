@@ -16,6 +16,7 @@
   	<module>springboot-conformity-data-solr</module>
   	<module>springboot-conformity-hadoop</module>
   	<module>springboot-conformity-async</module>
+  	<module>springboot-conformity-jasperreports</module>
   </modules>
   
   <properties>
