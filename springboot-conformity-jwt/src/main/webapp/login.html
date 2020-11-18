@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"></meta>
+	<title></title>
+	<script src="./js/jquery.min.js"></script>
+</head>
+<body>
+	<form>
+		<input id="loginName" name="loginName" type="text"/><br/>
+		<input id="password" name="password" type="password"/><br/>
+		<button onclick="return login();">提交</button>
+	</form>
+</body>
+<script>
+	$(function() {
+		
+	});
+	
+	function login() {
+		$.ajax({
+             type: "POST",
+             url: "http://localhost:8085/springboot-conformity-jwt/user/login",
+             data: {loginName:$("#loginName").val(), password:$("#password").val()},//发送到服务器的数据
+             dataType: "json",
+             success: function(data){
+             	console.log(data);
+             }
+         });
+        
+        return false;
+	}
+</script>
+</html>

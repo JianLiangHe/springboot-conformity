@@ -17,6 +17,7 @@
   	<module>springboot-conformity-hadoop</module>
   	<module>springboot-conformity-async</module>
   	<module>springboot-conformity-jasperreports</module>
+  	<module>springboot-conformity-jwt</module>
   </modules>
   
   <properties>
