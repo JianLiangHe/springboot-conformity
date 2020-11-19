@@ -18,6 +18,7 @@
   	<module>springboot-conformity-async</module>
   	<module>springboot-conformity-jasperreports</module>
   	<module>springboot-conformity-jwt</module>
+  	<module>springboot-conformity-druid1</module>
   </modules>
   
   <properties>
