@@ -1,0 +1,21 @@
+server:
+  port: 8087
+  servlet:
+    context-path: /springboot-conformity-multipartfile
+
+spring:
+  application:
+    name: upload-service
+  servlet:
+    multipart:
+      max-file-size: 10MB
+
+# ftp服务器配置      
+ftp:
+  fileUrl: http://www.hejianliang.info:20082/
+  host: www.hejianliang.info
+  userName: root
+  password: 1c269459b1c8511b7e693f2cbd8d27f7
+  port: 20022
+  rootPath: /usr/local/src/filedata
+      
