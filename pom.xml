@@ -19,6 +19,7 @@
   	<module>springboot-conformity-jasperreports</module>
   	<module>springboot-conformity-jwt</module>
   	<module>springboot-conformity-druid1</module>
+  	<module>springboot-conformity-jasypt</module>
   </modules>
   
   <properties>

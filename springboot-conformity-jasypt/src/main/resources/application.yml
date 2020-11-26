@@ -1,0 +1,10 @@
+server:
+  port: 8088
+  
+jasypt:
+  encryptor:
+    password: 6c5405e9-da58-46b0-91af-605d72e8569c
+    
+user:
+  username: ENC(MIp1bAMdm6QNCzTP4Ga09qVAjC0Fm36QQ1PXIg6+G1fzba4GsBsu6GMKMkoRfF5N)
+  pwd: ENC(Q7gI2OvzLZFtd6DRI18KLsNTqq1HLWk+w3VQsVhiIfIqQgo6FsLkr53vmZWqDYSB)
