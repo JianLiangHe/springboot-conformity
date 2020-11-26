@@ -1,0 +1,7 @@
+redis配置文件要修改的内容：
+daemonize no 改为：daemonize yes
+protected-mode yes 改为：protected-mode no
+注释 #bind 127.0.0.1
+可添加/不添加：requirepass (密码)
+========================================
+配置文件application修改为自己的配置。
