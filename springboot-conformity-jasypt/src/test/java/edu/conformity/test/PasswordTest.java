@@ -14,6 +14,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import edu.conformity.util.JasyptUtil;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PasswordTest {
@@ -28,6 +30,9 @@ public class PasswordTest {
 	
 	@Resource
     private StringEncryptor stringEncryptor;
+	
+	@Resource
+	private JasyptUtil jasyptUtil;
 	
 	/**
 	 *生成UUID，用于作为秘钥
@@ -60,6 +65,17 @@ public class PasswordTest {
 	@Test
 	public void userInfo() {
 		System.out.println("username: " + username + "\n pwd: " + pwd);
+	}
+	
+	/**
+	 * 测试JasyptUtil
+	 */
+	@Test
+	public void jasyptUtilTest() {
+		String pwd = "123456";
+		pwd = jasyptUtil.encrypt(pwd);
+		pwd = jasyptUtil.decrypt(pwd);
+		System.out.print(pwd);
 	}
 	
 }
