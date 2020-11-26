@@ -14,8 +14,8 @@ spring:
 ftp:
   fileUrl: http://www.hejianliang.info:20082/
   host: www.hejianliang.info
-  userName: xxxxx
-  password: xxxxx
-  port: 20022
+  userName: root
+  password: 392a32ea72d6bcba621e0e36be46cba0
+  port: 22
   rootPath: /usr/local/src/filedata
       
