@@ -21,6 +21,7 @@
   	<module>springboot-conformity-druid1</module>
   	<module>springboot-conformity-jasypt</module>
   	<module>springboot-conformity-redis</module>
+  	<module>springboot-conformity-mail</module>
   </modules>
   
   <properties>
