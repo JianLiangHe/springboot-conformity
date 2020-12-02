@@ -36,7 +36,12 @@ public class ProducerController {
 		return "success";
 	}
 	
-	
+	@RequestMapping(value = "sendTopic", method = RequestMethod.POST)
+	public String sendTopic(
+			@RequestParam(value = "message", required = true) String message) {
+		this.sendMessage(this.topic, message);
+		return "success";
+	}
 	
 	/**
 	 * 发送消息
