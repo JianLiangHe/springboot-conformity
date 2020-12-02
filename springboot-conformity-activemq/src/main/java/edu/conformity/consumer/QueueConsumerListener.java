@@ -1,6 +1,7 @@
 package edu.conformity.consumer;
 
 import org.springframework.jms.annotation.JmsListener;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class QueueConsumerListener {
 
-	@JmsListener(destination = "${spring.active.queue-name}", containerFactory = "queueListener")
+	
+	@JmsListener(destination = "${spring.activemq.queue-name}", containerFactory = "queueListener")
 	public void readActiveQueue(String message) {
 		System.out.println("queue接收到：" + message);
 	}
