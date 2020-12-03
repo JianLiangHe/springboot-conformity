@@ -23,7 +23,7 @@ public class ActivemqConfig {
     @Value("${spring.activemq.user}")
     private String username;
 
-    @Value("${spring.activemq.topic-name}")
+    @Value("${spring.activemq.password}")
     private String password;
 
     @Value("${spring.activemq.queue-name}")
