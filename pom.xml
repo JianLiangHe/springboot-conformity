@@ -23,6 +23,7 @@
   	<module>springboot-conformity-redis</module>
   	<module>springboot-conformity-mail</module>
   	<module>springboot-conformity-activemq</module>
+  	<module>springboot-conformity-activemq-producer</module>
   </modules>
   
   <properties>
