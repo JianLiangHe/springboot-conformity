@@ -24,6 +24,7 @@
   	<module>springboot-conformity-mail</module>
   	<module>springboot-conformity-activemq</module>
   	<module>springboot-conformity-activemq-producer</module>
+  	<module>springboot-conformity-activemq-consumer</module>
   </modules>
   
   <properties>
