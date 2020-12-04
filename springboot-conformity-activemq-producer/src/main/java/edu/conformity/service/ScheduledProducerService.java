@@ -2,7 +2,6 @@ package edu.conformity.service;
 
 import javax.jms.Destination;
 import javax.jms.Queue;
-import javax.jms.Topic;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,9 +11,14 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-@EnableScheduling
+/**
+ * 定时队列消息服务
+ * @author hejianliang
+ *
+ */
 @Component
-public class ProducerService {
+@EnableScheduling
+public class ScheduledProducerService {
 
 	private final Logger LOG = LoggerFactory.getLogger(ProducerService.class);
 	
@@ -24,44 +28,24 @@ public class ProducerService {
 	@Autowired
 	private Queue queue;
 	
-	@Autowired
-	private Topic topic;
+	/**
+	 * 定时推送的消息
+	 */
+	private String scheduledMessage = "{data:[]}";
 	
 	/**
-	 * 发送队列消息
+	 * 发送定时队列消息
 	 * @param message
 	 * @return
 	 */
-	public boolean sendQueue(String message) {
-		boolean flag = false;
-		
+	@Scheduled(fixedDelay = 10000) //该注解修改的方法不能有参数
+	public void sendQueueByScheduled() {
 		try {
-			this.sendMessage(this.queue, message);
-			LOG.info("发送队列消息：[" + message +"]，成功");
+			this.sendMessage(this.queue, this.scheduledMessage);
+			LOG.info("发送定时队列消息：[" + this.scheduledMessage +"]，成功");
 		} catch (Exception e) {
 			e.printStackTrace();
-			LOG.info("发送队列消息：[" + message +"]，失败。" + e.getMessage());
-		} finally {
-			return flag;
-		}
-	}
-	
-	/**
-	 * 发布订阅消息
-	 * @param message
-	 * @return
-	 */
-	public boolean sendTopic(String message) {
-		boolean flag = false;
-		
-		try {
-			this.sendMessage(this.topic, message);
-			LOG.info("发送订阅消息：[" + message +"]，成功");
-		} catch (Exception e) {
-			LOG.info("发送订阅消息：[" + message +"]，失败。" + e.getMessage());
-			e.printStackTrace();
-		} finally {
-			return flag;
+			LOG.info("发送定时队列消息：[" + this.scheduledMessage +"]，失败。" + e.getMessage());
 		}
 	}
 	
@@ -73,5 +57,5 @@ public class ProducerService {
 	private void sendMessage(Destination destination, final String message) {
 		jmsMessagingTemplate.convertAndSend(destination, message);
 	}
-
+	
 }
