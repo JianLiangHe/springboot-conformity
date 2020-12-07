@@ -26,6 +26,7 @@
   	<module>springboot-conformity-activemq-producer</module>
   	<module>springboot-conformity-activemq-consumer</module>
   	<module>springboot-conformity-activemq-consumer02</module>
+  	<module>springboot-conformity-easyexcel</module>
   </modules>
   
   <properties>

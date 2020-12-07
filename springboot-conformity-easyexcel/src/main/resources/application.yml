@@ -1,0 +1,12 @@
+server:
+  port: 8095
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://139.196.158.120:33306/easyexcel?allowMultiQueries=true&useUnicode=true&useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: Master555_
+#mybatis
+mybatis:
+  type-aliases-package: edu.conformity.pojo
+  mapperLocations: classpath:edu/conformity/mapper/*.xml
