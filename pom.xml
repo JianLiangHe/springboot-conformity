@@ -28,6 +28,7 @@
   	<module>springboot-conformity-activemq-consumer02</module>
   	<module>springboot-conformity-easyexcel</module>
   	<module>springboot-conformity-poi</module>
+  	<module>springboot-conformity-jpa01</module>
   </modules>
   
   <properties>
