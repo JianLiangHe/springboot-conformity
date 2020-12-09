@@ -29,6 +29,7 @@
   	<module>springboot-conformity-easyexcel</module>
   	<module>springboot-conformity-poi</module>
   	<module>springboot-conformity-jpa01</module>
+  	<module>springboot-conformity-jpa02</module>
   </modules>
   
   <properties>
