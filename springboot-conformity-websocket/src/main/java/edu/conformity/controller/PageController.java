@@ -1,0 +1,25 @@
+package edu.conformity.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * 页面跳转Controller
+ * @author hejianliang
+ *
+ */
+@Controller
+@RequestMapping("/page/")
+public class PageController {
+
+	@RequestMapping(value = "index1")
+	public String index1() {
+		return "index1";
+	}
+	
+	@RequestMapping(value = "index2")
+	public String index() {
+		return "index2";
+	}
+	
+}

@@ -30,6 +30,7 @@
   	<module>springboot-conformity-poi</module>
   	<module>springboot-conformity-jpa01</module>
   	<module>springboot-conformity-jpa02</module>
+  	<module>springboot-conformity-websocket</module>
   </modules>
   
   <properties>
