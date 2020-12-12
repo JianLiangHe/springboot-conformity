@@ -1,0 +1,18 @@
+server:
+  port: 8088
+  
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://139.196.158.120:33306/spring_security?allowMultiQueries=true&useUnicode=true&useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: Master555_
+    #type: com.alibaba.druid.pool.DruidDataSource
+    
+#jasypt:
+#  encryptor:
+#    password: 08120474-3acd-42aa-9e60-1e4d4c095940
+#mybatis
+mybatis:
+  type-aliases-package: edu.conformity.pojo
+  mapperLocations: classpath:edu/conformity/mapper/*.xml
