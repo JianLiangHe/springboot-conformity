@@ -33,6 +33,7 @@
   	<module>springboot-conformity-websocket</module>
   	<module>springboot-conformity-security01</module>
   	<module>springboot-conformity-security03</module>
+  	<module>springboot-conformity-session01</module>
   </modules>
   
   <properties>
