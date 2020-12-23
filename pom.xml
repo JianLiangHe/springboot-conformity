@@ -35,6 +35,8 @@
   	<module>springboot-conformity-security03</module>
   	<module>springboot-conformity-session01</module>
   	<module>springboot-conformity-quartz01</module>
+  	<module>springboot-conformity-webservice01</module>
+  	<module>Springboot-conformity-webservice02</module>
   </modules>
   
   <properties>
