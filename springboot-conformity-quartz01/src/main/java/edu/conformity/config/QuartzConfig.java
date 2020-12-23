@@ -13,6 +13,10 @@ import edu.conformity.job.DateTimeJob;
 @Configuration
 public class QuartzConfig {
 
+	/**
+	 * 任务
+	 * @return
+	 */
 	@Bean
 	public JobDetail printTimeJobDetail() {
 		return JobBuilder.newJob(DateTimeJob.class)
@@ -22,6 +26,10 @@ public class QuartzConfig {
 				.build();
 	}
 	
+	/**
+	 * 触发器
+	 * @return
+	 */
 	@Bean
 	public Trigger printTimeJobTrigger() {
 		CronScheduleBuilder cronScheduleBuilder = CronScheduleBuilder.cronSchedule("0/1 * * * * ?");
