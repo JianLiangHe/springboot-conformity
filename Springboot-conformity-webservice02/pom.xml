@@ -8,5 +8,30 @@
   <artifactId>Springboot-conformity-webservice02</artifactId>
   <name>Springboot-conformity-webservice02</name>
   <description>webservice客户端</description>
+  
+  <dependencies>
+  	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter</artifactId>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+	<!-- 热部署 -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+		<optional>true</optional>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-spring-boot-starter-jaxws -->
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+	    <version>3.2.4</version>
+	</dependency>
+  </dependencies>
+  
   <build/>
 </project>
