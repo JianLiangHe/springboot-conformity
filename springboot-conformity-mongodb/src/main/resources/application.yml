@@ -1,0 +1,7 @@
+server:
+  port: 8088
+  
+spring:
+  data:
+    mongodb:
+      uri: mongodb://139.196.158.120:27017/congge

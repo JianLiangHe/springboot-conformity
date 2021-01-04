@@ -37,6 +37,7 @@
   	<module>springboot-conformity-quartz01</module>
   	<module>springboot-conformity-webservice01</module>
   	<module>Springboot-conformity-webservice02</module>
+  	<module>springboot-conformity-mongodb</module>
   </modules>
   
   <properties>
