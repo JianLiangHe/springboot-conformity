@@ -42,4 +42,35 @@ public class BookController {
 		return bookService.get(id);
 	}
 	
+	@RequestMapping(value = "getByName", method = RequestMethod.GET)
+	public Book getByName(
+			@RequestParam(value = "name", required = true) String name) {
+		return bookService.getByName(name);
+	}
+	
+	@RequestMapping(value = "updateBook", method = RequestMethod.POST)
+	public String updateBook(
+			@RequestParam(value = "id", required = true) String id,
+			@RequestParam(value = "name", required = true) String name,
+			@RequestParam(value = "info", required = true) String info
+			) {
+		Book book = new Book(id, name, info);
+		return bookService.updateBook(book);
+	}
+	
+	@RequestMapping(value = "deleteById", method = RequestMethod.POST)
+	public String deleteById(
+			@RequestParam(value = "id", required = true) String id) {
+		return bookService.deleteById(id);
+	}
+	
+	@RequestMapping(value = "deleteByBook", method = RequestMethod.POST)
+	public String deleteByBook(
+			@RequestParam(value = "id", required = true) String id,
+			@RequestParam(value = "name", required = true) String name,
+			@RequestParam(value = "info", required = true) String info) {
+		Book book = new Book(id, name, info);
+		return bookService.deleteByBook(book);
+	}
+	
 }

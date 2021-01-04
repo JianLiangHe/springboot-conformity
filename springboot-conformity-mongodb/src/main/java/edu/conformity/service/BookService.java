@@ -12,4 +12,14 @@ public interface BookService {
 	
 	Book get(String id);
 	
+	Book getByName(String name);
+	
+	String updateBook(Book book);
+
+	String deleteById(String id);
+	
+	String deleteByBook(Book book);
+
+	List<Book> findByLikes(String search);
+	
 }
