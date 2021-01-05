@@ -38,6 +38,7 @@
   	<module>springboot-conformity-webservice01</module>
   	<module>Springboot-conformity-webservice02</module>
   	<module>springboot-conformity-mongodb</module>
+  	<module>springboot-conformity-ehcache</module>
   </modules>
   
   <properties>
