@@ -39,6 +39,7 @@
   	<module>Springboot-conformity-webservice02</module>
   	<module>springboot-conformity-mongodb</module>
   	<module>springboot-conformity-ehcache</module>
+  	<module>springboot-conformity-mongodb02</module>
   </modules>
   
   <properties>
