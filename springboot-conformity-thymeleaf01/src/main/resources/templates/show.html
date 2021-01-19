@@ -3,11 +3,15 @@
 <head>
     <title>SpringBoot模版渲染</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
 </head>
 <body>
     <p th:text="'用户ID：' + ${uid}"/>
     <p th:text="'用户名称：' + ${name}"/>
     <p th:utext="'年龄：' + ${age}"/>
     <p th:text="'数学运算：' + (1 + 2)"/>
+    <hr/>
+    <a th:href="@{/thymeleaf/show2}">访问show2</a>
+    <a th:href="@{/static_html.html}">访问静态页面</a>
 </body>
 </html>
