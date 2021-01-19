@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -44,6 +46,33 @@ public class ThymeleafController {
 		model.addAttribute("mydate", new Date());
 		
 		return "show3";
+	}
+	
+	@RequestMapping(value = "inner", method = RequestMethod.GET)
+	public String inner(HttpServletRequest request, Model model) {
+		request.setAttribute("requestMessage", "springboot-request");
+		request.getSession().setAttribute("sessionMessage", "springboot-session");
+		request.getServletContext().setAttribute("applicationMessage", "springboot-application");
+		model.addAttribute("url", "www.baidu.com");
+		request.setAttribute("url2",
+	            "<span style='color:red'>www.baidu.com</span>");
+		return "show_inner";
+	}
+	
+	@RequestMapping(value = "show4", method = RequestMethod.GET)
+	public String show4(Model model) {
+		model.addAttribute("age", 17);
+		model.addAttribute("name", "lucy");
+		model.addAttribute("name2", "Jack");
+		model.addAttribute("hobbies", 2);
+		return "show4";
+	}
+	
+	@RequestMapping(value = "show5", method = RequestMethod.GET)
+	public String show5(Model model) {
+		String[] names = {"Jack", "Jackey", "Lucy", "Lili", "Bilibili", "Dilidili", "Cilicili"};
+		model.addAttribute("names", names);
+		return "show5";
 	}
 	
 }

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SpringBoot模版渲染</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<!-- 逻辑处理 -->
+	<span  th:if="${age lt 18}">
+		未成年人
+	</span >
+	<p th:if="${name eq 'Lucy'}">
+		欢迎Lucy访问
+	</p>
+	<p th:if="${name2 eq 'Jack'}">
+		欢迎Jack访问
+	</p>
+	<span th:switch="${hobbies}">
+		<p th:case="1">篮球</p>
+		<p th:case="2">足球</p>
+		<p th:case="3">网球</p>
+	</span>
+</body>
+</html>
