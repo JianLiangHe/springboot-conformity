@@ -41,6 +41,7 @@
   	<module>springboot-conformity-ehcache</module>
   	<module>springboot-conformity-mongodb02</module>
   	<module>springboot-conformity-thymeleaf01</module>
+  	<module>springboot-conformity-actuator</module>
   </modules>
   
   <properties>
