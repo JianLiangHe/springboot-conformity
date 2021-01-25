@@ -42,6 +42,7 @@
   	<module>springboot-conformity-mongodb02</module>
   	<module>springboot-conformity-thymeleaf01</module>
   	<module>springboot-conformity-actuator</module>
+  	<module>springboot-conformity-jwt02</module>
   </modules>
   
   <properties>
