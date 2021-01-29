@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: springboot-conformity-dockerfile
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: edu.springboot
+Build-Jdk: 1.8.0_112
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/springboot-conformity/springboot-conformity-dockerf
+ ile
+Created-By: Maven Integration for Eclipse
+
