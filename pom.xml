@@ -43,6 +43,7 @@
   	<module>springboot-conformity-thymeleaf01</module>
   	<module>springboot-conformity-actuator</module>
   	<module>springboot-conformity-jwt02</module>
+  	<module>springboot-conformity-dockerfile</module>
   </modules>
   
   <properties>
