@@ -44,6 +44,7 @@
   	<module>springboot-conformity-actuator</module>
   	<module>springboot-conformity-jwt02</module>
   	<module>springboot-conformity-dockerfile</module>
+  	<module>springboot-conformity-elasticsearch</module>
   </modules>
   
   <properties>
