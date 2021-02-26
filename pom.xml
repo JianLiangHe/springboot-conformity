@@ -45,6 +45,7 @@
   	<module>springboot-conformity-jwt02</module>
   	<module>springboot-conformity-dockerfile</module>
   	<module>springboot-conformity-elasticsearch</module>
+  	<module>springboot-conformity-lambda</module>
   </modules>
   
   <properties>
