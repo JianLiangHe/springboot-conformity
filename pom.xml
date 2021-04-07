@@ -46,6 +46,7 @@
   	<module>springboot-conformity-dockerfile</module>
   	<module>springboot-conformity-elasticsearch</module>
   	<module>springboot-conformity-lambda</module>
+  	<module>springboot-conformity-webmagic</module>
   </modules>
   
   <properties>
