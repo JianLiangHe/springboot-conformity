@@ -47,6 +47,7 @@
   	<module>springboot-conformity-elasticsearch</module>
   	<module>springboot-conformity-lambda</module>
   	<module>springboot-conformity-webmagic</module>
+  	<module>springboot-conformity-oauth2</module>
   </modules>
   
   <properties>
