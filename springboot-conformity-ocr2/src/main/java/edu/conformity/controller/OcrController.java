@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,11 +19,14 @@ import edu.conformity.util.OcrUtil;
 @RequestMapping(value = "/ocr")
 public class OcrController {
 
-	private final String APP_ID = "24021149";
+	@Value("${baiduclould.ocr.app_id}")
+	private String APP_ID;
 	
-	private final String API_KEY = "mPM69MtxHLzLB4uyKBUuYaFq";
+	@Value("${baiduclould.ocr.api_key}")
+	private String API_KEY;
 	
-	private final String SECRET_KEY = "c1LNyTeCNR1GKRVi8DBUK4RQ17MPq3sg";
+	@Value("${baiduclould.ocr.secret_key}")
+	private String SECRET_KEY;
 	
 	@RequestMapping(value = "/ocr", method = RequestMethod.POST)
 	public Map<Object, Object> ocr(MultipartFile file) throws Exception {

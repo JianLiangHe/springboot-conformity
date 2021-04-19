@@ -1,2 +1,8 @@
 server:
   port: 8088
+  
+baiduclould:
+  ocr:
+    app_id: 24021149
+    api_key: mPM69MtxHLzLB4uyKBUuYaFq
+    secret_key: c1LNyTeCNR1GKRVi8DBUK4RQ17MPq3sg
