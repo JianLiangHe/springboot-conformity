@@ -1,15 +1,14 @@
 package edu.conformity.controller;
 
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import edu.conformity.service.CarRecognitionService;
+import edu.conformity.util.RtnResult;
 
 /**
  * 车辆识别
@@ -29,10 +28,10 @@ public class CarRecognitionController {
 	 * @return
 	 */
 	@RequestMapping(value = "/plateNumberRecognition", method = RequestMethod.POST)
-	public Map<String, Object> plateNumberRecognition(MultipartFile file) {
-		Map<String, Object> resultMap = carRecognitionService.plateNumberRecognition(file);
+	public RtnResult plateNumberRecognition(MultipartFile file) {
+		RtnResult rtnResult = carRecognitionService.plateNumberRecognition(file);
 		
-		return resultMap;
+		return rtnResult;
 	}
 	
 }

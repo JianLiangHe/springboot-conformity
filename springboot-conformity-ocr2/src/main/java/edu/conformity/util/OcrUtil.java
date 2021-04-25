@@ -9,7 +9,7 @@ import java.util.Map;
  *
  */
 public class OcrUtil {
-
+	
 	/**
 	 * 打印出识别的文字
 	 * @param map

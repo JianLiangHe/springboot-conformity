@@ -4,6 +4,8 @@ import java.util.Map;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import edu.conformity.util.RtnResult;
+
 /**
  * 车辆识别业务层
  * @author hejianliang
@@ -16,6 +18,6 @@ public interface CarRecognitionService {
 	 * @param file
 	 * @return
 	 */
-	Map<String, Object> plateNumberRecognition(MultipartFile file);
+	RtnResult plateNumberRecognition(MultipartFile file);
 	
 }

@@ -6,3 +6,8 @@ baiduclould:
     app_id: 24021149
     api_key: mPM69MtxHLzLB4uyKBUuYaFq
     secret_key: c1LNyTeCNR1GKRVi8DBUK4RQ17MPq3sg
+  # 车辆识别ocr
+  ocr_car_recognition:
+    app_id: 24059038
+    api_key: RCqcBmTTbYK9PBvC6av1xxyy
+    secret_key: NvsttequSyQTMk0Pk2FDbFLdDqyE8TFW
