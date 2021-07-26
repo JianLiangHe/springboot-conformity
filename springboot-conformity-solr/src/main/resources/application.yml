@@ -1,0 +1,7 @@
+server:
+  port: 8088
+  
+spring:
+  data:
+    solr:
+      host: http://1.116.215.237:8983/solr/t_student

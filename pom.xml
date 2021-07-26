@@ -50,6 +50,7 @@
   	<module>springboot-conformity-oauth2</module>
   	<module>springboot-conformity-ocr</module>
   	<module>springboot-conformity-ocr2</module>
+  	<module>springboot-conformity-solr</module>
   </modules>
   
   <properties>
