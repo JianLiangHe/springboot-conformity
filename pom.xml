@@ -51,6 +51,7 @@
   	<module>springboot-conformity-ocr</module>
   	<module>springboot-conformity-ocr2</module>
   	<module>springboot-conformity-solr</module>
+  	<module>springboot-conformity-springbatch</module>
   </modules>
   
   <properties>
