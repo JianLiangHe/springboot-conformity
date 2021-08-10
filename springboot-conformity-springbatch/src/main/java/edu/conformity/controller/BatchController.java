@@ -32,7 +32,7 @@ public class BatchController {
 		return "The job is proceed.";
 	} 
 	
-	@RequestMapping(value = "steps", method = RequestMethod.POST)
+	@RequestMapping(value = "steps", method = RequestMethod.GET)
 	public String invokeSteps() throws Exception {
 		JobParameters jobParameters = new JobParametersBuilder().addLong("time", System.currentTimeMillis())
 					.toJobParameters();
