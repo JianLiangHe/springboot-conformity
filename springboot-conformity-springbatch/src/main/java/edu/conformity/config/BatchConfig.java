@@ -8,6 +8,7 @@ import org.springframework.batch.core.configuration.annotation.StepBuilderFactor
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import edu.conformity.service.impl.ItemProcessorService;
 import edu.conformity.service.impl.ItemProcessorService2;
@@ -16,6 +17,12 @@ import edu.conformity.service.impl.ItemReaderService2;
 import edu.conformity.service.impl.ItemWriterService;
 import edu.conformity.service.impl.JobListener;
 
+/**
+ * Batch 配置类
+ * @author hejianliang
+ *
+ */
+@Configuration
 public class BatchConfig {
 
 	@Autowired

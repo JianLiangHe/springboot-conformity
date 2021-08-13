@@ -14,16 +14,15 @@ public class JobListener implements JobExecutionListener {
 	
 	@Override
 	public void afterJob(JobExecution arg0) {
-		logger.info("JOB IS STARTED. ");
+		if (arg0.getStatus() == BatchStatus.COMPLETED) {
+			logger.info("====批处理执行结束====");
+		}
 	}
 
 	@Override
 	public void beforeJob(JobExecution arg0) {
-		if (arg0.getStatus() == BatchStatus.FAILED) {
-			logger.info("JOB IS EXECUTED FAILED. ");
-		}
-		if (arg0.getStatus() == BatchStatus.COMPLETED) {
-			logger.info("JOB IS EXECUTED SUCCESSFULLY. ");
+		if (arg0.getStatus() == BatchStatus.STARTED) {
+			logger.info("====批处理执行开始====");
 		}
 	}
 
